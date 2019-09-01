@@ -14,7 +14,11 @@ for i = 1 : length(files)
         ['Quantization level: ', num2str(quant_levels(j))]
 
         % Compute and show quantized image
+        figure(1);
         imshow(image / quant_levels(j), []);
+        
+        figure(2);
+        imhist(image / quant_levels(j));
         
         % Pause
         pause;
