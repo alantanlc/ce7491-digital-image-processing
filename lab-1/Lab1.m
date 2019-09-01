@@ -1,24 +1,22 @@
 % Clear workspace and command window
 clear; clc;
 
-% Read in images
-img_lena = imread('Lena.bmp');
-img_peppers = imread('Peppers.bmp');
-img_mandrill = imread('Mandrill.bmp');
-
-images = [img_lena img_peppers img_mandrill];
-
-% Loop through each quantization level and show quantized images as figures
+% Initialie variables
+files = ["Lena.bmp", "Peppers.bmp", "Mandrill.bmp"];
 quant_levels = [2 4 6 8 16 64];
-for i = 1 : length(quant_levels)
-    quant_levels(i)
-    
-    % Divide images by quantization level
-    quantized_img = images / quant_levels(i);
-    
-    % Show image
-    imshow(quantized_img, []);
-    
-    % Pause
-    pause;
+
+% Loop through images
+for i = 1 : length(files)
+    image = imread(files(i));
+
+    % Loop through quantization level
+    for j = 1 : length(quant_levels)
+        ['Quantization level: ', num2str(quant_levels(j))]
+
+        % Compute and show quantized image
+        imshow(image / quant_levels(j), []);
+        
+        % Pause
+        pause;
+    end
 end
