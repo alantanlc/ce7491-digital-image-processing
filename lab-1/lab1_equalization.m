@@ -38,7 +38,7 @@ function J = localhisteq(I, W)
         for y = size(I,2)+1 : 2*size(I,2)
             % Extract local image
             local_image = reflected_image(x-win_x_half : x+win_x_half, y-win_y_half : y+win_y_half);
-            local_image_equalized = histeq(local_image);
+            local_image_equalized = histeq(local_image); % MATLAB default histogram size is 64
             
             % Show local image, histogram, equalized image, and equalized histogram
 %             figure(1);
