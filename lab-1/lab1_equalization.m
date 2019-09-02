@@ -3,7 +3,7 @@ clear; clc;
 
 % Initialize variables
 I = imread('Lena.bmp');
-local_window_size = 512;
+local_window_size = 21;
 
 % Perform local histogram equalization
 J = localhisteq(I, [local_window_size local_window_size]);
