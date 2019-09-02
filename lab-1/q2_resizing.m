@@ -3,7 +3,7 @@ clear; clc;
 
 % Initialize variables
 files = ["Lena.bmp", "Peppers.bmp", "Mandrill.bmp"];
-resize_levels = [2 4 6 8 16];
+resize_levels = [2 4 8 16];
 
 % Loop through images
 for i = 1 : length(files) 
