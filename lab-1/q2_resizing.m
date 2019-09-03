@@ -17,7 +17,12 @@ for i = 1 : length(files)
       resized_image = imresize(image, resize_levels(j));
       
       % Show resized image
+      figure(1);
       imshow(resized_image);
+      
+      % Show histogram
+      figure(2);
+      imhist(resized_image);
       
       % Pause
       pause;
