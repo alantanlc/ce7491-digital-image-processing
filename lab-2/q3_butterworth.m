@@ -1,19 +1,19 @@
 clear; clc;
 
-I = imread('flower.tif');
-d0 = 100;
-n = 4;
-ftype = 'low'; % lowpass or highpass
-
-J = butterworthbpf(I, 30, 120, 4);
+% I = imread('flower.tif');
+% d0 = 100;
+% n = 4;
+% ftype = 'low'; % lowpass or highpass
+% J = butterworthbpf(I, 30, 120, 4);
 
 % Mesh plot
 n = 2;
-d0 = 1;
-[X, Y] = meshgrid(-8:.5:8);
+d0 = 100;
+[X, Y] = meshgrid(-512:512);
 R = 1+((X.^2 + Y.^2)/d0^2).^n;
 Z = 1./R;
 mesh(X, Y, Z);
+% fftshow(Z, 'abs');
 
 function filtered_image = butterworthbpf(I,d0,d1,n)
     % Butterworth Bandpass Filter
