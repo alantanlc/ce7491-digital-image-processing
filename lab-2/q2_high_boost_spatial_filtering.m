@@ -15,17 +15,17 @@ function J = high_boost_filter(I, M, A)
     % Verify that A is valid
     A = double(A);
     if A < 1
-        disp('A must be greater than or equal to 0')
+        error('A must be greater than or equal to 0')
         return
     end
 
     % Generate mask
     if M == 1   % Mask 1
-        mask = double([1 1 1; 1 -4 1; 1 1 1]);
+        mask = double([0 1 0; 1 -4 1; 0 1 0]);
     elseif M == 2   % Mask 2
         mask = double([1 1 1; 1 -8 1; 1 1 1]);
     else
-        'M must be 1 or 2'
+        error('M must be 1 or 2')
         return
     end
     
