@@ -13,7 +13,6 @@ imshow([I, J]);
 % High-boost filtering function
 function J = high_boost_filter(I, M, A)
     % Verify that A is valid
-    A = double(A);
     if A < 1
         error('A must be greater than or equal to 0')
         return
