@@ -1,7 +1,7 @@
 clear; clc;
 
 % Initialize variables
-d0 = 80;
+d0 = 50
 n = 2;
 ftype = 'low'; % low or high
 rows = 2;
