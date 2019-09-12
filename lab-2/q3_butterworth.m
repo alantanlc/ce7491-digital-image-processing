@@ -8,7 +8,7 @@ rows = 2;
 cols = 4;
 
 % Read in image
-I = imread('flower.tif');
+I = imread('image.tif');
 subplot(rows,cols,1);
 imshow(I);
 
