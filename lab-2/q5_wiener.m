@@ -47,10 +47,6 @@ imshow(F,[]);
 subplot(r,c,8);
 fftshow(F_fft);
 
-function J = wiener(I, H, K)
-    J = 0
-end
-
 % Inverse filtering: If we know of or can create a good model of blurring
 % function that corrupted an image, the quickest and easiest way to restore
 % that is by inverse filtering. Unfortunately, since the inverse filter is
