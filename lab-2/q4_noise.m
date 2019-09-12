@@ -13,9 +13,9 @@ I_fft = fftshift(fft2(I));
 subplot(r,c,2);
 fftshow(I_fft);
 
-% Apply butter bandpas
-L1 = butterlp(I, 35, 100);
-H = butterhp(I, 45, 100);
+% Apply butter bandpass
+L1 = butterlp(I, 30, 50);
+H = butterhp(I, 50, 50);
 B = L1 + H;
 J2 = B.*I_fft;
 J = B.*I_fft;
