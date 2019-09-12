@@ -1,14 +1,14 @@
 clear; clc;
 
 % Initialize variables
-d0 = 20;
+d0 = 50;
 n = 2;
 ftype = 'low'; % low or high
 rows = 2;
 cols = 4;
 
 % Read in image
-I = imread('image.tif');
+I = imread('lena.tif');
 subplot(rows,cols,1);
 imshow(I);
 
