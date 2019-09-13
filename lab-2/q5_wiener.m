@@ -27,7 +27,7 @@ c = 4;
 
 % Degraded
 subplot(r,c,1);
-imshow(G, []);
+imshow(G);
 subplot(r,c,5);
 fftshow(G_fft);
 

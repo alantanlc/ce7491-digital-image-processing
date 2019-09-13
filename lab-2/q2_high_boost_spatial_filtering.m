@@ -1,3 +1,11 @@
+% Applying filters that enhance image derivatives will sharpen images
+
+% Laplacian filter enhances edges only. Eliminates slowly varying image
+% regions - may not be desirable.
+
+% High boost filtering - mix original image f(x,y) and Laplacian filtered
+% image fs(x,y)
+
 % Clear workspace and command window
 clc; clear;
 
@@ -5,7 +13,7 @@ clc; clear;
 I = imread('flower.tif');
 
 % Perform high boost filtering
-A = 1;
+A = 2;
 mask = 2;
 J = high_boost_filter(I, mask, A);
 imshow([I, J]);
