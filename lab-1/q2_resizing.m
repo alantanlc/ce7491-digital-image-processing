@@ -14,11 +14,11 @@ for i = 1 : length(files)
       ['Resize level: ', num2str(resize_levels(j))]
       
       % Compute resized image
-      resized_image = imresize(image, resize_levels(j));
+      resized_image = imresize(image, 1/resize_levels(j));
       
       % Show resized image
       figure(1);
-      imshow(resized_image);
+      imshow(resized_image, []);
       
       % Show histogram
       figure(2);
