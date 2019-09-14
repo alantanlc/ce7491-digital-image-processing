@@ -1,3 +1,19 @@
+% Observations
+
+% After RGB equalization, there's a more uniform distribution of the
+% individual RGB channels
+    % Flower petals become less red
+    % Leaves become less green, starting to turn yellow due to drop in
+    % green and blue levels
+    % Since more RGB is distributed to higher levels as compared to
+    % original, there is an increase in brighter color levels such as
+    % white, resulting in a brighter image
+
+% After V equalization, red and green is slightly more distributed to
+% brighter levels, not so much for blue
+    % Little effect on blue histogram
+    % Could it be because image is large red (flower) and green (leaves);
+
 % Clear command window and workspace
 clear; clc;
 
