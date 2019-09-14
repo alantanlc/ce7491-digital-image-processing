@@ -1,3 +1,10 @@
+% Hue value ranges from 0 - 1
+% Multiply hue value by 360 to convert to degrees and rotate by adding/subtracting
+% angle in degrees, modulus by 360
+% Multiply hue value by 2pi to convert to radians and rotate by adding/subtracting
+% angle in radians, modulus by 2pi
+% Remember to scale hue value range back to 0 and 1
+
 % Clear command window and workspace
 clear; clc; clf;
 
@@ -37,7 +44,7 @@ imshow(J,[]);
 
 % Part 2 results
 figure(2);
-c = 2;
+c = 4;
 r = ceil(length(angles)/c);
 for i=1:length(angles)
     subplot(r,c,i);
