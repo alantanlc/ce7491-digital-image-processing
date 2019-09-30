@@ -14,8 +14,10 @@ subplot(r,c,2);
 fftshow(I_fft);
 
 % Apply butter bandpass
-L1 = butterlp(I, 30, 50);
-H = butterhp(I, 50, 50);
+th_low = 33;
+th_high = 47;
+L1 = butterlp(I, th_low, 100);
+H = butterhp(I, th_high, 100);
 B = L1 + H;
 J2 = B.*I_fft;
 J = B.*I_fft;
@@ -26,3 +28,4 @@ fftshow(J2);
 K = ifft2(fftshift(J));
 subplot(r,c,4);
 imshow(K,[]);
+linkaxes;

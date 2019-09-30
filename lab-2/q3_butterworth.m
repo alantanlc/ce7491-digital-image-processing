@@ -3,7 +3,7 @@ clear; clc;
 % Initialize variables
 d0 = 50;
 n = 2;
-ftype = 'low'; % low or high
+ftype = 'high'; % low or high
 rows = 2;
 cols = 4;
 
@@ -53,6 +53,7 @@ function J = butterworth(I, d0, n, ftype)
     A = 0.5;
     B = 0.5;
     J = A.*(fftI) + B.*(fftI.*H);
+%     J = fftI.*H;
     
     subplot(rows,cols,8);
     fftshow(J);

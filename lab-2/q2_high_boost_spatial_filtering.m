@@ -10,11 +10,11 @@
 clc; clear;
 
 % Read in image
-I = imread('flower.tif');
+I = imread('lena.tif');
 
 % Perform high boost filtering
-A = 2;
-mask = 2;
+A = 1;
+mask = 1;
 J = high_boost_filter(I, mask, A);
 imshow([I, J]);
 

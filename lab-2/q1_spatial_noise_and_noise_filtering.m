@@ -8,12 +8,12 @@ I2 = imread('flower.tif');
 % Gaussian
 I1_gaussian = imnoise(I1, 'gaussian');
 I1_gaussian_median = medfilt2(I1_gaussian);
-I1_gaussian_gaussian = imgaussfilt(I1_gaussian);
+I1_gaussian_gaussian = imgaussfilt(I1_gaussian, 1);
 
 % Salt and pepper
 I1_salt = imnoise(I1, 'salt & pepper', 0.02);
 I1_salt_median = medfilt2(I1_salt);
-I1_salt_gaussian = imgaussfilt(I1_salt);
+I1_salt_gaussian = imgaussfilt(I1_salt, 1);
 
 imshow([I1 I1_gaussian I1_gaussian_median I1_gaussian_gaussian; I1 I1_salt I1_salt_median I1_salt_gaussian]);
 

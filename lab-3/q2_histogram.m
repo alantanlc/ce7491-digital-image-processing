@@ -37,7 +37,7 @@ LAB_2 = rgb2lab(RGB_2);
 
 % Part 3: Convert to L*a*b and equalize only L*, convert back to RGB
 LAB_3 = rgb2lab(I);
-LAB_3(1,:,:) = histeq(LAB_3(1,:,:));
+LAB_3(:,:,1) = histeq(LAB_3(:,:,1));
 RGB_3 = lab2rgb(LAB_3);
 HSV_3 = rgb2hsv(RGB_3);
 
