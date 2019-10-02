@@ -28,6 +28,8 @@ J = J(r+1:2*r, c+1:2*c);
 % Show result
 subplot(1,2,1);
 imshow(edge(I, 'canny', [], sigma));
+title('Non symmetrically reflected');
 subplot(1,2,2);
 imshow(J, []);
+title('Symmetrically reflected');
 linkaxes;
